@@ -1,0 +1,93 @@
+
+:root{
+
+    --mainFont: 'Krub', sans-serif;
+
+    --white:#fff;
+
+    --primary:#ffc107;
+    --secondary:#0097A7;
+    --gray:#757575;
+    --dark:#212121;
+
+}
+
+
+
+
+html{
+    box-sizing:border-box;
+}
+
+*, *:before, *:after{
+    box-sizing:inherit;
+}
+
+body{
+  
+font-family:var(--mainFont);
+}
+
+.main-navigation{
+    max-width:1200px;
+    margin: 0 auto;
+    display:flex;
+    padding:1rem 0;
+    flex-direction:column;
+    align-items:center;
+}
+
+@media(min-width:768px){
+
+    .main-navigation{
+        flex-direction:row;
+        justify-content:space-between;
+    }
+}
+
+.main-navigation a{
+ color:var(--dark);
+ text-decoration:none;
+ font-size:1.4rem;
+ margin-bottom:1.4rem;
+
+}
+
+@media(min-width:768px){
+
+    .main-navigation a{
+
+        margin-bottom:0;
+
+    }
+}
+
+.hero{
+    height:550px;
+    background-image: url(../img/hero.jpg);
+    position: relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.hero::after{
+    content:'';
+    display:block;
+    background-color:rgba(0,0,0, .8);
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    position: absolute;
+}
+
+.hero-contact{
+    color:var(--white);
+    position:relative;
+    z-index:1;
+    /* text-align:center; */
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
